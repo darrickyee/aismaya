@@ -1,4 +1,42 @@
-catch (`setAttr IKcvSpine1_MShape.controlPoints[0] -5.52058399e-18 -0.01630764375 -0.002965026177`);
+JOINTMAP = {'Root_M': 'cf_J_Kosi02',
+            'Hip': 'cf_J_LegUp00',
+            'Knee': 'cf_J_LegLow01',
+            'Ankle': 'cf_J_Foot01',
+            'Toes': 'cf_J_Toes01',
+            'Spine1_M': 'cf_J_Hips',
+            'Spine2_M': 'cf_J_Spine02',
+            'Chest_M': 'cf_J_Spine03',
+            'Scapula': 'cf_J_Shoulder',
+            'Shoulder': 'cf_J_ArmUp00',
+            'Elbow': 'cf_J_ArmLow01',
+            'Wrist': 'cf_J_Hand',
+            'PinkyFinger1': 'cf_J_Hand_Little01',
+            'PinkyFinger2': 'cf_J_Hand_Little02',
+            'PinkyFinger3': 'cf_J_Hand_Little03',
+            'RingFinger1': 'cf_J_Hand_Ring01',
+            'RingFinger2': 'cf_J_Hand_Ring02',
+            'RingFinger3': 'cf_J_Hand_Ring03',
+            'IndexFinger1': 'cf_J_Hand_Index01',
+            'IndexFinger2': 'cf_J_Hand_Index02',
+            'IndexFinger3': 'cf_J_Hand_Index03',
+            'ThumbFinger1': 'cf_J_Hand_Thumb01',
+            'ThumbFinger2': 'cf_J_Hand_Thumb02',
+            'ThumbFinger3': 'cf_J_Hand_Thumb03',
+            'MiddleFinger1': 'cf_J_Hand_Middle01',
+            'MiddleFinger2': 'cf_J_Hand_Middle02',
+            'MiddleFinger3': 'cf_J_Hand_Middle03',
+            'Neck_M': 'cf_J_Neck',
+            'Head_M': 'cf_J_Head',
+            'Eye': 'cf_J_look'}
+
+CTRLMAP = {
+    'IKLeg': 'ctrl_ikleg',
+    'PoleLeg': 'ctrl_poleleg',
+    'IKArm': 'ctrl_ikarm',
+    'PoleArm': 'ctrl_polearm'
+}
+
+AS5CURVES = '''catch (`setAttr IKcvSpine1_MShape.controlPoints[0] -5.52058399e-18 -0.01630764375 -0.002965026177`);
 catch (`setAttr IKcvSpine1_MShape.controlPoints[1] 5.52058399e-18 0.01630764375 0.002965026177`);
 catch (`setAttr IKcvSpine1_MShape.controlPoints[2] 0 0 0`);
 catch (`setAttr IKcvSpine1_MShape.controlPoints[3] -6.440681322e-16 -0.2965026177 1.630764375`);
@@ -1192,3 +1230,4 @@ catch (`setAttr IKSpine3_MShape.controlPoints[13] 1.650653154 0.01432434685 -1.6
 catch (`setAttr IKSpine3_MShape.controlPoints[14] 1.6575 0.315132377 1.635686675`);
 catch (`setAttr IKSpine3_MShape.controlPoints[15] 1.6575 -0.01500621954 1.66569929`);
 catch (`setAttr IKSpine3_MShape.overrideColor 17`);
+'''

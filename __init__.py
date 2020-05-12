@@ -34,3 +34,7 @@ class AisShaper:
             self.setShapes(self._presets[preset])
         else:
             raise ValueError("No preset named '{}'".format(preset))
+
+    @property
+    def presets(self):
+        return list(self._presets.keys())

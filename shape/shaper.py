@@ -1,5 +1,4 @@
-from functools import partial
-import pymel.core as pm
+
 
 
 class Shaper(object):
@@ -61,30 +60,3 @@ class Shaper(object):
         idx = 0 if val < 0 else 3
         c = coefs[idx: idx+3]
         return sum(c[i]*val**i for i in range(3))
-
-
-def setTransforms(root, xform_dict):
-    root = pm.ls(root)
-    if root:
-        joints = root + root[0].listRelatives(ad=True, type='joint')
-        for joint in joints:
-            if joint.name() in xform_dict:
-                for xf, val in xform_dict[joint.name()].items():
-                    # combdict = {'t': op.add, 'r': lambda x, y: y, 's': op.mul}
-                    v = -val if xf in ['tx', 'ry'] else val
-                    joint.attr(xf).set(v)
-
-
-sb = Shaper(loadShapeData(pth + 'ShapeData_body.csv'))
-
-# applyShape = partial(setTransforms, 'cf_J_FaceRoot')
-applyShape = partial(setTransforms, 'cf_J_Root')
-sb.apply_shape = applyShape
-
-CHARS = loadDBChars(pth+'shape.db')
-HEADS = CHARS['heads']
-BODIES = CHARS['bodies']
-
-
-def resetShape():
-    sb.setShapes(BODIES['default'])
