@@ -33,7 +33,8 @@ CTRLMAP = {
     'IKLeg': 'ctrl_ikleg',
     'PoleLeg': 'ctrl_poleleg',
     'IKArm': 'ctrl_ikarm',
-    'PoleArm': 'ctrl_polearm'
+    'PoleArm': 'ctrl_polearm',
+    'AimEye_M': 'ctrl_look_M'
 }
 
 AS5CURVES = '''catch (`setAttr IKcvSpine1_MShape.controlPoints[0] -5.52058399e-18 -0.01630764375 -0.002965026177`);

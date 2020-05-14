@@ -6,6 +6,9 @@ from .data import JOINTMAP, CTRLMAP, AS5CURVES
 
 def preBuild():
     _alignAs5(JOINTMAP)
+    # Fix HeadEnd
+    pm.move('HeadEnd', (0, 0, 0), localSpace=True)
+    pm.move('HeadEnd', (0, 1.7, 0), r=True)
 
 
 def postBuild():

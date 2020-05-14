@@ -2,10 +2,13 @@ import pymel.core as pm
 
 
 def _constrain(jnt_map, constraintFn=pm.orientConstraint, mo=True):
+    constraints = []
     for src, tgt in jnt_map.items():
         sides = [''] if src.endswith('_M') else ['_L', '_R']
         for side in sides:
-            constraintFn(src+side, tgt+side, mo=mo)
+            constraints.append(constraintFn(src+side, tgt+side, mo=mo))
+
+    return constraints
 
 
 def _attachHips():
