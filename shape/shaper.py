@@ -1,6 +1,5 @@
 
 
-
 class Shaper(object):
 
     def __init__(self, shape_data, apply_shape=None):

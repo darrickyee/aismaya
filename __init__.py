@@ -28,6 +28,7 @@ class AisShaper:
 
         self.setShape = self._shaper.setShape
         self.setShapes = self._shaper.setShapes
+        self.shapes = self._shaper.shapes
 
     def applyPreset(self, preset):
         if preset in self._presets:
